@@ -16,6 +16,8 @@ package de.yaio.commons.net;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 
 /** 
@@ -68,5 +70,10 @@ public class HostNameMatcher {
      */
     public List<String> getHostRegExList() {
         return this.hostRegExList;
+    }
+
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
 }

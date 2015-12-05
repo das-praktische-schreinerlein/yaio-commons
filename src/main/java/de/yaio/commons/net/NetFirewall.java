@@ -18,6 +18,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /** 
  * utils for NetFirewall
  * 
@@ -187,5 +190,10 @@ public class NetFirewall {
     public boolean isUrlAllowed(final String url) throws MalformedURLException {
         URL iUrl = new URL(url);
         return isAllowed(iUrl);
+    }
+    
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
 }

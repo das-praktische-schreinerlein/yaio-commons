@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.apache.commons.net.util.SubnetUtils;
 
 /** 
@@ -79,5 +81,10 @@ public class IpAddressMatcher {
      */
     public List<SubnetUtils> getIpList() {
         return this.ipList;
+    }
+
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
 }

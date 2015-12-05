@@ -13,6 +13,9 @@
  */
 package de.yaio.commons.net;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 
 /** 
  * utils for NetFirewall
@@ -142,5 +145,10 @@ public class NetFirewallConfig {
      */
     public void setFlgUseDefaultProtocolWhiteList(boolean flgUseDefaultProtocolWhiteList) {
         this.flgUseDefaultProtocolWhiteList = flgUseDefaultProtocolWhiteList;
+    }
+
+    @Override
+    public String toString() {
+        return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();
     }
 }
