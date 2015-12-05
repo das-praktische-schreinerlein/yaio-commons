@@ -1,9 +1,9 @@
 /** 
- * software for projectmanagement and documentation
+ * common yaio-utils
  * 
- * @FeatureDomain                Collaboration 
+ * @FeatureDomain                Utils 
  * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
+ * @category                     utils
  * @copyright                    Copyright (c) 2014, Michael Schreiner
  * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  *
@@ -40,7 +40,7 @@ import org.apache.log4j.Logger;
  * utils for http-calls
  * 
  * @FeatureDomain                Utils
- * @package                      de.yaio.utils
+ * @package                      de.yaio.commons.http
  * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
  * @category                     collaboration
  * @copyright                    Copyright (c) 2014, Michael Schreiner
@@ -48,9 +48,8 @@ import org.apache.log4j.Logger;
  */
 public class HttpUtils {
     
-    private static final Logger LOGGER =
-                    Logger.getLogger(HttpUtils.class);
-                
+    private static final Logger LOGGER = Logger.getLogger(HttpUtils.class);
+
     /** 
      * execute the prepared Request
      * @FeatureDomain                Tools - URL-Handling
@@ -128,15 +127,15 @@ public class HttpUtils {
         request.addHeader("User-Agent", "YAIOCaller");
  
         // call url
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Sending 'GET' request to URL : " + url);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Sending 'GET' request to URL : " + url);
         }
         HttpResponse response = HttpUtils.executeRequest(request, username, password);
         
         // get response
         int retCode = response.getStatusLine().getStatusCode();
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Response Code : " + retCode);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Response Code : " + retCode);
         }
         return response;
     }
@@ -224,15 +223,15 @@ public class HttpUtils {
         request.addHeader("User-Agent", "YAIOCaller");
         
         // call url
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Sending 'POST' request to URL : " + baseUrl);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Sending 'POST' request to URL : " + baseUrl);
         }
         HttpResponse response = executeRequest(request, username, password);
         
         // get response
         int retCode = response.getStatusLine().getStatusCode();
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Response Code : " + retCode);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Response Code : " + retCode);
         }
         return response;
     }
@@ -289,15 +288,15 @@ public class HttpUtils {
         request.addHeader("User-Agent", "YAIOCaller");
         
         // call url
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Sending 'PATCH' request to URL : " + baseUrl);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Sending 'PATCH' request to URL : " + baseUrl);
         }
         HttpResponse response = executeRequest(request, username, password);
         
         // get response
         int retCode = response.getStatusLine().getStatusCode();
-        if (LOGGER.isInfoEnabled()) {
-            LOGGER.info("Response Code : " + retCode);
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Response Code : " + retCode);
         }
         return response;
     }
