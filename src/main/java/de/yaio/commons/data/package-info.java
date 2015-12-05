@@ -1,10 +1,10 @@
 /** 
- * software for projectmanagement and documentation<br>
- * services and utils
+ * Common Utils<br>
+ * services and utils for data-manipulation
  * 
- * @FeatureDomain                Collaboration 
+ * @FeatureDomain                Utils 
  * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
+ * @category                     data-utils
  * @copyright                    Copyright (c) 2014, Michael Schreiner
  * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  *

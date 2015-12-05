@@ -1,9 +1,9 @@
 /** 
- * software for projectmanagement and documentation
+ * common yaio-utils
  * 
- * @FeatureDomain                Collaboration 
+ * @FeatureDomain                Utils 
  * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
+ * @category                     utils
  * @copyright                    Copyright (c) 2014, Michael Schreiner
  * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  *
@@ -30,13 +30,12 @@ import org.apache.log4j.Logger;
 /** 
  * Utils for managing data
  * @FeatureDomain                Utils
- * @package                      de.yaio.utils
+ * @package                      de.yaio.commons.data
  * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
  * @category                     Utils
  * @copyright                    Copyright (c) 2014, Michael Schreiner
  * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
-
 public class DataUtils {
     protected static MessageDigest objMD5Coder;
     static { 
