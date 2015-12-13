@@ -28,6 +28,13 @@
         <!-- shade to an ueber-jar - activate it with "mvn package -Dpackaging.shade-phase=package" -->
         <packaging.shade-phase>none</packaging.shade-phase>
 
+        <!--  maven install -->
+        <groupId>${project.groupId}</groupId>
+        <artifactId>${project.artifactId}</artifactId>
+        <version>${project.version}</version>
+        <packaging>${packaging.type}</packaging>
+        <file>target/${project.artifactId}-${project.version}.${packaging.type}</file>
+
         <!--
           ##################
           # Projectdata
@@ -62,6 +69,15 @@
     <!-- packaging jar or war and version -->
     <packaging>${packaging.type}</packaging>
     
+    <!-- use these repositories to solve dependencies and get jars -->
+    <repositories>
+        <repository>
+            <id>git-das-praktische-schreinerlein</id>
+            <name>das-praktische-schreinerlein's Git based repo</name>
+            <url>https://github.com/das-praktische-schreinerlein/maven-repo/raw/master/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- logging -->
         <dependency>
