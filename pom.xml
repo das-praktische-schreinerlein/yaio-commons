@@ -6,7 +6,7 @@
     <!-- the base -->
     <groupId>de.yaio</groupId>
     <artifactId>yaio-commons</artifactId>
-    <version>0.2.1</version>
+    <version>0.3.0</version>
     <name>yaio-commons</name>
     <description>commons for yaio</description>
     <url>https://github.com/das-praktische-schreinerlein/commons</url>
@@ -51,7 +51,7 @@
         <!--  versions -->
         <java.version>1.7</java.version>
 
-        <commons-collections.version>3.2.2</commons-collections.version>
+        <commons-collections.version>4.1</commons-collections.version>
         <commons-lang3.version>3.1</commons-lang3.version>
         <commons-new.version>3.3</commons-new.version>
         <httpclient.version>4.3.6</httpclient.version>
@@ -102,8 +102,8 @@
         </dependency>
         
         <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
             <version>${commons-collections.version}</version>
         </dependency>
         <dependency>
