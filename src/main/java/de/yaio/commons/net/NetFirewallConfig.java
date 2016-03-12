@@ -19,13 +19,6 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /** 
  * utils for NetFirewall
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class NetFirewallConfig {
     private String ipBlackList = "";

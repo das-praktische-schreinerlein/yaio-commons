@@ -18,16 +18,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 /** 
- * baseinterface for tests<br>
- * 
- * @FeatureDomain                Tests
- * @package                      de.yaio
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     tests
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ * baseinterface for tests
  */
-
 @RunWith(JUnit4.class)
 public abstract class BaseTest {
     
@@ -35,13 +27,6 @@ public abstract class BaseTest {
     
     /** 
      * testobject
-     * 
-     * @FeatureDomain                Test
-     * @package                      de.yaio
-     * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
-     * @category                     tests
-     * @copyright                    Copyright (c) 2014, Michael Schreiner
-     * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
      */
     public interface TestObj  {
         String toString();
@@ -49,9 +34,6 @@ public abstract class BaseTest {
 
     /** 
      * setup the a TestObj for the test
-     * @FeatureDomain                Tests
-     * @FeatureResult                returnvalue TestObj - the dataobj for the test
-     * @FeatureKeywords              Test Config Initialisation
      * @return                       the dataobj for the test
      * @throws Exception             io-Exceptions possible
      */
@@ -59,8 +41,6 @@ public abstract class BaseTest {
 
     /** 
      * setup the test
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              Test Config Initialisation
      * @throws Exception             io-Exceptions possible
      */
     @Before
@@ -69,8 +49,6 @@ public abstract class BaseTest {
 
     /** 
      * teardown the test
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              Test Config
      * @throws Exception             io-Exceptions possible
      */
     @After

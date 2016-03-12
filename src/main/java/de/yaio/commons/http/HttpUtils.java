@@ -13,11 +13,7 @@
  */
 package de.yaio.commons.http;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Map;
-
-import org.apache.commons.collections.MapUtils;
+import org.apache.commons.collections4.MapUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.auth.AuthScope;
@@ -36,15 +32,12 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Map;
+
 /** 
  * utils for http-calls
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.http
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class HttpUtils {
     
@@ -52,10 +45,7 @@ public class HttpUtils {
 
     /** 
      * execute the prepared Request
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - HttpResponse
-     * @FeatureKeywords              URL-Handling
-     * @param request                request to call 
+     * @param request                request to call
      * @param username               username for auth
      * @param password               password for auth
      * @return                       HttpResponse
@@ -75,9 +65,6 @@ public class HttpUtils {
 
     /** 
      * execute GET-Request for url with params
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - ByteArray with the textresponse
-     * @FeatureKeywords              URL-Handling
      * @param baseUrl                the url to call
      * @param username               username for auth
      * @param password               password for auth
@@ -99,9 +86,6 @@ public class HttpUtils {
 
     /** 
      * execute GET-Request for url with params
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - ByteArray with the textresponse
-     * @FeatureKeywords              URL-Handling
      * @param baseUrl                the url to call
      * @param username               username for auth
      * @param password               password for auth
@@ -142,9 +126,6 @@ public class HttpUtils {
     
     /** 
      * execute POST-Request for url with params
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - ByteArray with the textresponse
-     * @FeatureKeywords              URL-Handling
      * @param baseUrl                the url to call
      * @param username               username for auth
      * @param password               password for auth
@@ -173,9 +154,6 @@ public class HttpUtils {
 
     /** 
      * execute POST-Request for url with params
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - HttpResponse
-     * @FeatureKeywords              URL-Handling
      * @param baseUrl                the url to call
      * @param username               username for auth
      * @param password               password for auth
@@ -238,9 +216,6 @@ public class HttpUtils {
 
     /** 
      * execute POST-Request for url with params
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - HttpResponse
-     * @FeatureKeywords              URL-Handling
      * @param baseUrl                the url to call
      * @param username               username for auth
      * @param password               password for auth

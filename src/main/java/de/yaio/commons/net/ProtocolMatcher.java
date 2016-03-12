@@ -22,22 +22,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /** 
  * utils for protocol-matching
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     utils
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class ProtocolMatcher {
     private List<String> protocolList;
 
     /** 
      * creates an ProtocolMatcher
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - ProtocolMatcher
-     * @FeatureKeywords              URL-Handling
      * @param protocolList           list of protocols
      */
     public ProtocolMatcher(final List<String> protocolList) {
@@ -46,9 +36,6 @@ public class ProtocolMatcher {
 
     /** 
      * checks if the protocol matches one of the protocols
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it matches protocolList
-     * @FeatureKeywords              URL-Handling
      * @param protocol               protocol to check
      * @return                       true/false if it matches protocolList
      */

@@ -29,12 +29,6 @@ import org.apache.log4j.Logger;
 
 /** 
  * Utils for managing data
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.data
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     Utils
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class DataUtils {
     protected static MessageDigest objMD5Coder;
@@ -54,9 +48,6 @@ public class DataUtils {
 
     /** 
      * escape html entities
-     * @FeatureDomain                Tools - Converter
-     * @FeatureResult                returnValue html-escaped string
-     * @FeatureKeywords              Converter
      * @param src                    the string to escape all html
      * @return                       the html-escaped string
      */
@@ -78,9 +69,6 @@ public class DataUtils {
     
     /** 
      * lazy escape html entities
-     * @FeatureDomain                Tools - Converter
-     * @FeatureResult                returnValue html-escaped string
-     * @FeatureKeywords              Converter
      * @param src                    the string to escape all html
      * @return                       the html-escaped string
      */
@@ -98,9 +86,6 @@ public class DataUtils {
 
     /** 
      * convert commaseparated string to map
-     * @FeatureDomain                Tools - Converter
-     * @FeatureResult                returnValue map
-     * @FeatureKeywords              Converter
      * @param csvString              the string to split
      * @return                       the map of string
      */
@@ -123,9 +108,6 @@ public class DataUtils {
     
     /** 
      * calcs the checksum of the data
-     * @FeatureDomain                BusinessLogic
-     * @FeatureResult                returnValue String - checksum of the node
-     * @FeatureKeywords              BusinessLogic
      * @param data                   data to get the checksum
      * @return                       the checksum
      * @throws Exception             parser/format/io-Exceptions possible
@@ -191,9 +173,6 @@ public class DataUtils {
     
     /** 
      * extract url from string (defaults if not set scheme:http host:localhost port:80)
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - the extracted url
-     * @FeatureKeywords              URL-Handling
      * @param value                  string to extract url from
      * @return                       the extracted url
      * @throws MalformedURLException possible invalid URL

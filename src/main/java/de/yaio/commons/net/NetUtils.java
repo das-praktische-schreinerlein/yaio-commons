@@ -20,22 +20,12 @@ import java.net.UnknownHostException;
 
 /** 
  * utils for ip-addess-matching
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class NetUtils {
 
     /** 
      * parse IPAddress of the hostName
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - InetAddress
-     * @FeatureKeywords              URL-Handling
-     * @param hostname               hostName to parse 
+     * @param hostname               hostName to parse
      * @return                       corresponding IPAddress
      */
     public static InetAddress parseAddress(String hostname) {
@@ -48,10 +38,7 @@ public class NetUtils {
     
     /** 
      * parse IPAddress of the url
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - InetAddress
-     * @FeatureKeywords              URL-Handling
-     * @param url                    url to parse 
+     * @param url                    url to parse
      * @return                       corresponding IPAddress
      * @throws MalformedURLException if url is invalid
      */

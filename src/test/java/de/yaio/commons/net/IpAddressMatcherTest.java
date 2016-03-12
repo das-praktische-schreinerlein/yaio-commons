@@ -38,7 +38,6 @@ public class IpAddressMatcherTest extends BaseTest {
     /** 
      * testobject for IpAddressMatcher
      * 
-     * @FeatureDomain                TestObject
      * @package                      de.yaio.commons.net
      * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
      * @category                     tests
@@ -66,8 +65,6 @@ public class IpAddressMatcherTest extends BaseTest {
     @Test
     /** 
      * testIPRanges
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              Test
      * @throws Exception             Exceptions possible
      */
     public void testIPRanges() throws Exception {

@@ -20,21 +20,11 @@ import java.util.List;
 
 /** 
  * Utils for NetFirewall
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class NetFirewallFactory {
     
     /** 
      * creates a secured NetFirewall by netFirewallConfig
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - NetFirewall
-     * @FeatureKeywords              URL-Handling
      * @param netFirewallConfig      netFirewallConfig
      * @return                       NetFirewall
      */
@@ -77,9 +67,6 @@ public class NetFirewallFactory {
     
     /** 
      * creates a secured NetFirewall (only http, https, ftp and all localnets are blacklisted)
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - secure NetFirewall
-     * @FeatureKeywords              URL-Handling
      * @param ipBlackList            comma separated ips which are blacklisted
      * @param ipWhiteList            comma separated ips which are whitelisted: overrides blacklist
      * @param hostBlackList          comma separated hostnames which are blacklisted
@@ -101,9 +88,6 @@ public class NetFirewallFactory {
     
     /** 
      * creates a secured NetFirewall (only http, https, ftp and all localnets are blacklisted)
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - secure NetFirewall
-     * @FeatureKeywords              URL-Handling
      * @return                       secure NetFirewall
      */
     public static NetFirewall createSecureWebshotFirewall() {
@@ -117,9 +101,6 @@ public class NetFirewallFactory {
     
     /** 
      * creates a IpAddressMatcher for all localnets
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - IpAddressMatcher for all localnets
-     * @FeatureKeywords              URL-Handling
      * @return                       IpAddressMatcher for all localnets
      */
     public static IpAddressMatcher createIPAdressMatcherForLocalNets() {
@@ -134,9 +115,6 @@ public class NetFirewallFactory {
 
     /** 
      * creates a HostNameMatcher for all localhost-names
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - IpAddressMatcher for all localhost-names
-     * @FeatureKeywords              URL-Handling
      * @return                       IpAddressMatcher for all localhost-names
      */
     public static HostNameMatcher createHostNameMatcherForLocalHosts() {
@@ -151,9 +129,6 @@ public class NetFirewallFactory {
 
     /** 
      * creates a ProtocolMatcher for common web-protocols
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - ProtocolMatcher for common web-protocols
-     * @FeatureKeywords              URL-Handling
      * @return                       ProtocolMatcher for common web-protocols
      */
     public static ProtocolMatcher createProtocolMatcherForWebProtocols() {

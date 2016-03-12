@@ -22,14 +22,7 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /** 
- * utils for NetFirewall
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     collaboration
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ * a NetFirewall
  */
 public class NetFirewall {
     protected final IpAddressMatcher ipBlackList;
@@ -40,9 +33,6 @@ public class NetFirewall {
 
     /** 
      * creates an NetFirewall
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - NetFirewall
-     * @FeatureKeywords              URL-Handling
      * @param ipBlackList            ips which are blacklisted
      * @param ipWhiteList            ips which are whitelisted: overrides blacklist
      * @param hostBlackList          hostnames which are blacklisted
@@ -64,9 +54,6 @@ public class NetFirewall {
 
     /** 
      * creates an NetFirewall
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - NetFirewall
-     * @FeatureKeywords              URL-Handling
      * @param ipBlackList            ips which are blacklisted
      * @param ipWhiteList            ips which are whitelisted: overrides blacklist
      * @param hostBlackList          hostnames which are blacklisted
@@ -88,9 +75,6 @@ public class NetFirewall {
 
     /** 
      * checks if ip is forbidden
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is forbidden
-     * @FeatureKeywords              URL-Handling
      * @param ipAddress              ip-address to check
      * @return                       true/false if it is forbidden
      */
@@ -100,9 +84,6 @@ public class NetFirewall {
 
     /** 
      * checks if ip is allowed
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is allowed
-     * @FeatureKeywords              URL-Handling
      * @param ipAddress              ip-address to check
      * @return                       true/false if it is allowed
      */
@@ -112,9 +93,6 @@ public class NetFirewall {
 
     /** 
      * checks if hostname is forbidden
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is forbidden
-     * @FeatureKeywords              URL-Handling
      * @param host                   hostname to check
      * @return                       true/false if it is forbidden
      */
@@ -124,9 +102,6 @@ public class NetFirewall {
 
     /** 
      * checks if hostname is allowed
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is allowed
-     * @FeatureKeywords              URL-Handling
      * @param host                   hostname to check
      * @return                       true/false if it is allowed
      */
@@ -136,9 +111,6 @@ public class NetFirewall {
 
     /** 
      * checks if protocol is allowed
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is allowed
-     * @FeatureKeywords              URL-Handling
      * @param protocol               protocol to check
      * @return                       true/false if it is allowed
      */
@@ -148,9 +120,6 @@ public class NetFirewall {
 
     /** 
      * checks if url is allowed
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is allowed
-     * @FeatureKeywords              URL-Handling
      * @param url                    url to check (check protocoll, hostname and ip)
      * @return                       true/false if it is allowed
      * @throws MalformedURLException fro parsing the url
@@ -180,9 +149,6 @@ public class NetFirewall {
 
     /** 
      * checks if url is allowed
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it is allowed
-     * @FeatureKeywords              URL-Handling
      * @param url                    url to check (check protocoll, hostname and ip)
      * @return                       true/false if it is allowed
      * @throws MalformedURLException fro parsing the url

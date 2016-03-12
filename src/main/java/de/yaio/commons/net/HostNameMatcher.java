@@ -22,23 +22,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /** 
  * utils for hostName-matching
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     utils
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class HostNameMatcher {
     private List<String> hostRegExList;
 
     /** 
      * creates an HostNameMatcher
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - HostNameMatcher
-     * @FeatureKeywords              URL-Handling
-     * @param hostRegExList          list of regex to match hostnames 
+     * @param hostRegExList          list of regex to match hostnames
      */
     public HostNameMatcher(final List<String> hostRegExList) {
         this.hostRegExList = hostRegExList;
@@ -46,9 +36,6 @@ public class HostNameMatcher {
 
     /** 
      * checks if the hostname matches one of the hostRegExList
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it matches hostRegExList
-     * @FeatureKeywords              URL-Handling
      * @param hostName               hostname to check
      * @return                       true/false if it matches
      */

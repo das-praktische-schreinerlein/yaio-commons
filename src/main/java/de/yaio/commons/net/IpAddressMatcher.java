@@ -23,22 +23,12 @@ import org.apache.commons.net.util.SubnetUtils;
 
 /** 
  * utils for ip-address-matching
- * 
- * @FeatureDomain                Utils
- * @package                      de.yaio.commons.net
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     utils
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
  */
 public class IpAddressMatcher {
     private List<SubnetUtils> ipList;
 
     /** 
-     * creates an HostNameMatcher
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - IpAddressMatcher
-     * @FeatureKeywords              URL-Handling
+     * creates an IpAddressMatcher
      * @param ipList                 list of ip-addresses with/without netmask
      */
     public IpAddressMatcher(List<String> ipList) {
@@ -60,9 +50,6 @@ public class IpAddressMatcher {
 
     /** 
      * checks if the ipAddress matches one of the netmasks from ipList
-     * @FeatureDomain                Tools - URL-Handling
-     * @FeatureResult                returnValues - true/false if it matches netmasks from ipList
-     * @FeatureKeywords              URL-Handling
      * @param ipAddress              ipAddress to check
      * @return                       true/false if it matches netmasks from ipList
      */

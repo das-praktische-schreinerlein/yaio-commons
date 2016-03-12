@@ -23,14 +23,7 @@ import org.apache.log4j.Logger;
 import de.yaio.commons.BaseTest.TestObj;
 
 /** 
- * services for tests<br>
- * 
- * @FeatureDomain                Tests
- * @package                      de.yaio
- * @author                       Michael Schreiner <michael.schreiner@your-it-fellow.de>
- * @category                     tests
- * @copyright                    Copyright (c) 2014, Michael Schreiner
- * @license                      http://mozilla.org/MPL/2.0/ Mozilla Public License 2.0
+ * services for tests
  */
 
 public class TestServices {
@@ -41,8 +34,6 @@ public class TestServices {
 
     /** 
      * compares the resulting dataobj.toString with myExpecteResult
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              Test Service
      * @param myTestObj              the dataobj to test
      * @param myExpectedResult       the expected result
      * @throws Exception             io-Exceptions possible
@@ -60,8 +51,6 @@ public class TestServices {
 
     /** 
      * compares the resulting string line by line with myExpecteResult
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              Test Service
      * @param result                 the string to test
      * @param myExpectedResult       the expected result
      * @throws Exception             io-Exceptions possible
@@ -96,8 +85,6 @@ public class TestServices {
     
     /** 
      * read the fixture-file from package-resource 
-     * @FeatureDomain                Tests
-     * @FeatureKeywords              FileUtil
      * @param base                   base to get the packagepath for srcFile
      * @param srcFile                file to load from package
      * @return                       resulting filecontent
