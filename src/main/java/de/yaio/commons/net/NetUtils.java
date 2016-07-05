@@ -28,12 +28,8 @@ public class NetUtils {
      * @param hostname               hostName to parse
      * @return                       corresponding IPAddress
      */
-    public static InetAddress parseAddress(String hostname) {
-        try {
-            return InetAddress.getByName(hostname);
-        } catch (UnknownHostException e) {
-            throw new IllegalArgumentException("Failed to parse address" + hostname, e);
-        }
+    public static InetAddress parseAddress(String hostname) throws UnknownHostException {
+        return InetAddress.getByName(hostname);
     }
     
     /** 
@@ -42,10 +38,10 @@ public class NetUtils {
      * @return                       corresponding IPAddress
      * @throws MalformedURLException if url is invalid
      */
-    public static InetAddress parseAddressFromUrl(String url) throws MalformedURLException {
+    public static InetAddress parseAddressFromUrl(String url) throws UnknownHostException, MalformedURLException {
         String myUrl = url.toLowerCase();
         if (!myUrl.startsWith("http://") && !myUrl.startsWith("https://") && !myUrl.startsWith("ftp://")) {
-            throw new IllegalArgumentException("Illegal protocoll (only: http, https, ftp) for url:" + myUrl);
+            throw new MalformedURLException("Illegal protocoll (only: http, https, ftp) for url:" + myUrl);
         }
         URL iUrl = new URL(myUrl);
         return parseAddress(iUrl.getHost());

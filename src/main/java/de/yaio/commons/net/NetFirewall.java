@@ -13,11 +13,14 @@
  */
 package de.yaio.commons.net;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.List;
 
+import de.yaio.commons.io.IOExceptionWithCause;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -122,9 +125,10 @@ public class NetFirewall {
      * checks if url is allowed
      * @param url                    url to check (check protocoll, hostname and ip)
      * @return                       true/false if it is allowed
-     * @throws MalformedURLException fro parsing the url
+     * @throws MalformedURLException parsing the url
+     * @throws UnknownHostException  parsing the url
      */
-    public boolean isAllowed(final URL url) throws MalformedURLException {
+    public boolean isAllowed(final URL url) throws UnknownHostException, MalformedURLException {
         // check protocol
         if (!isInProtocolList(url.getProtocol())) {
             return false;
@@ -151,13 +155,34 @@ public class NetFirewall {
      * checks if url is allowed
      * @param url                    url to check (check protocoll, hostname and ip)
      * @return                       true/false if it is allowed
-     * @throws MalformedURLException fro parsing the url
+     * @throws MalformedURLException parsing the url
+     * @throws UnknownHostException  parsing the url
      */
-    public boolean isUrlAllowed(final String url) throws MalformedURLException {
+    public boolean isUrlAllowed(final String url) throws UnknownHostException, MalformedURLException {
         URL iUrl = new URL(url);
         return isAllowed(iUrl);
     }
-    
+
+    /**
+     * checks if url is allowed
+     * @param url                    url to check (check protocol, hostname and ip)
+     * @throws PermissionException   not allowed
+     * @throws IOExceptionWithCause  parsing the url
+     */
+    public void throwExceptionIfNotAllowed(final String url) throws IOExceptionWithCause, PermissionException {
+        try {
+            if (!isUrlAllowed(url)) {
+                throw new PermissionException("request not allowed by NetFirewall", url, new IOException("request for url:" + url
+                        + " not allowed by NetFirewall:"
+                        + new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString()));
+            }
+        } catch (UnknownHostException ex) {
+            throw new IOExceptionWithCause("unknown host to extract metadata from", url, ex);
+        } catch (MalformedURLException ex) {
+            throw new IOExceptionWithCause("malformed url to extract metadata from", url, ex);
+        }
+    }
+
     @Override
     public String toString() {
         return new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString();

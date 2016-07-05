@@ -30,16 +30,16 @@ public abstract class ConfigurationHelper {
 
     public Configuration initConfiguration(final CmdLineHelper cmdLineHelper) {
         String configFile = cmdLineHelper.getConfigFile();
-        return initConfiguration(cmdLineHelper, configFile);
+        try {
+            return initConfiguration(cmdLineHelper, configFile);
+        } catch (IOExceptionWithCause ex) {
+            throw new IllegalArgumentException("cant read propertyFile for configOption", ex);
+        }
     }
 
-    public Configuration initConfiguration(final CmdLineHelper cmdLineHelper, final String configFile) {
-        Properties props;
-        try {
-            props = IOUtils.getInstance().readProperties(configFile);
-        } catch (IOExceptionWithCause ex) {
-            throw new IllegalArgumentException("cant read propertyFile for config", ex);
-        }
+    public Configuration initConfiguration(final CmdLineHelper cmdLineHelper, final String configFile)
+        throws IOExceptionWithCause {
+        Properties props = IOUtils.getInstance().readProperties(configFile);
         return initConfiguration(cmdLineHelper, props);
     }
 
