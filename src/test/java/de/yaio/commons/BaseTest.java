@@ -45,7 +45,7 @@ public abstract class BaseTest {
      */
     @Before
     public void setUp() throws Exception {
-    };
+    }
 
     /** 
      * teardown the test
@@ -53,5 +53,5 @@ public abstract class BaseTest {
      */
     @After
     public void tearDown() throws Exception {
-    };
+    }
 }
