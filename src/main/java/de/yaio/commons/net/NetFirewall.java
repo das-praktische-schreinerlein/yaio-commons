@@ -177,9 +177,9 @@ public class NetFirewall {
                         + new ReflectionToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).toString()));
             }
         } catch (UnknownHostException ex) {
-            throw new IOExceptionWithCause("unknown host to extract metadata from", url, ex);
+            throw new IOExceptionWithCause("unknown host", url, ex);
         } catch (MalformedURLException ex) {
-            throw new IOExceptionWithCause("malformed url to extract metadata from", url, ex);
+            throw new IOExceptionWithCause("malformed url", url, ex);
         }
     }
 
